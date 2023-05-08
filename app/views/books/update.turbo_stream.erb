@@ -1,0 +1,7 @@
+<% if @book.completed? %>
+  <%= turbo_stream.remove "incomplete_#{dom_id(@book)}" %>
+  <%= turbo_stream.append "completed_books", BookComponent.new(book: @book) %>
+<% else %>
+  <%= turbo_stream.remove "completed_#{dom_id(@book)}" %>
+  <%= turbo_stream.append "incomplete_books", BookComponent.new(book: @book)%>
+<% end %>

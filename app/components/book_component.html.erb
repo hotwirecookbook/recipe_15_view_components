@@ -1,0 +1,14 @@
+<div
+  id="<%= div_id %>"
+  class="relative flex items-start animate__animated"
+  data-entering-class="animate__fadeInUp"
+  data-leaving-class="animate__fadeOutDown">
+  <div class="flex h-6 items-center">
+    <%= form_with model: book, method: :patch, data: {controller: "autosubmit"}, class: "flex h-6 items-center" do |f| %>
+      <%= f.check_box :completed, checked: book.completed?, data: { action: "autosubmit#submit"}, class: "h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" %>
+      <div class="ml-3">
+        <%= f.label :completed, book.title, class: "text-sm font-medium leading-6 text-gray-900" %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="flex space-x-10 p-10" data-controller="stream-animations">
+  <%= render BooksListComponent.new(
+      title: "Books to read",
+      id: "incomplete_books",
+      books: @incomplete_books
+    ) %>
+  <%= render BooksListComponent.new(
+      title: "Books I read",
+      id: "completed_books",
+      books: @completed_books
+    ) %>
+</div>

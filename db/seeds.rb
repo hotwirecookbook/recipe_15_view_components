@@ -1,0 +1,8 @@
+Book.create(title: "The Great Gatsby")
+Book.create(title: "The Catcher in the Rye")
+Book.create(title: "To Kill a Mockingbird")
+Book.create(title: "The Grapes of Wrath")
+Book.create(title: "The Color Purple")
+Book.create(title: "Ulysses")
+Book.create(title: "Beloved")
+Book.create(title: "The Lord of the Rings")
